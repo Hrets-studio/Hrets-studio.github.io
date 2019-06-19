@@ -1,0 +1,68 @@
+.quote {
+    position: relative;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #fff;
+    padding: 100px 100px;
+    width: 90%;
+    max-width: 1200px;
+
+
+}
+
+.quote .graphic {
+    z-index: 1;
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+
+.quote .graphic.right {
+    top: 20px;
+    right: 0;
+}
+
+.quote .graphic.left {
+    bottom: 20px;
+    left: 0;
+}
+
+.graphic img {
+
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .quote .graphic {
+
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .quote {
+
+        font-size: 20px;
+        font-weight: 500;
+        padding: 60px 60px;
+        width: 100%;
+
+
+    }
+
+    .quote .graphic.right, .quote .graphic.left {
+        
+        right: auto;
+        left: 50%;
+        margin-left: -50px;
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+
+}

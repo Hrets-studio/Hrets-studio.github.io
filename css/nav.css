@@ -1,0 +1,112 @@
+a {
+  transition: all 300ms 50ms linear;
+}
+
+
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+	position: fixed;
+/*	min-height: 70px;*/
+/*	max-height: 70px;*/
+	overflow: visible;
+	width:100%;
+	opacity: 1;
+	top:0;
+	transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 1);
+    padding-top: 12px;
+    padding-bottom: 16px;
+	z-index: 100;
+}
+
+nav.open-nav {
+	max-height: 100vh; 
+}
+
+nav.open-nav .navbar {
+    visibility: visible;
+    height: auto;
+    padding: 20px 10% 30px 20px;
+    top: 50px;
+    right: -10%;
+    
+}
+
+
+.sticky .navbar {
+	background-color: rgba(255, 255, 255, 1);
+    position: absolute;
+    right: -100%;
+    margin-right: -6%;
+    top: 50px;
+    min-height: 100vh;
+    transition-property: all;
+    transition-duration: 1s;
+    z-index:999;
+}
+
+.open-nav .navbar {
+    right: 0;
+/*
+    transition-property: all;
+    transition-duration: 1s;
+*/
+}
+
+nav ul {
+	list-style: none;
+	overflow: hidden;
+	display: flex;
+	justify-content: flex-end;
+	padding-bottom: 1rem;
+}
+
+nav ul li {
+	margin: 0 1rem;
+	line-height: 1.5;
+}
+
+nav ul a {
+	color: #999;
+	text-transform: uppercase;
+	font-size: 1.1rem;
+	text-decoration: none;
+}
+
+nav ul a.active {
+	color: #FF8833;
+}
+
+.nav-toggler {
+	display: none;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 8px;
+	transition: all 200ms ease-in;
+}
+
+@media only screen and (max-width: 4000px) {
+	nav .navbar {
+        visibility: hidden;
+        height: 0;
+	}
+
+	.nav-toggler {
+    	display: block;
+	}
+	
+	nav ul {
+		flex-direction: column;
+		text-align: left;
+	}
+
+	nav ul li {
+		margin-bottom: 2rem;
+	}
+}

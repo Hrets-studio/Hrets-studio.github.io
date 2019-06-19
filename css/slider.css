@@ -1,0 +1,30 @@
+#s4 {
+    display: flex;
+    align-items: center;
+    min-height: 0;
+    padding-bottom: 6em;
+}
+
+#s4 .container {
+    max-width: 800px;
+}
+
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.image {
+/*    width: 250px;*/
+    max-width: 250px;
+}
+
+.image img {
+    display: block;
+    width: 100%;
+    
+}
